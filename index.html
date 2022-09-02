@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,55 +10,77 @@
     </head>
     <body>
         <section>
-            <form action="">
+            <form action="" id="tag-form">
                 <fieldset>
                     <legend>FSR CTM Tag Builder</legend>
                     <div>
-                        <label for="ctm-handle">Handle*</label>
-                        <input type="text" name="Handle" id="ctm-handle" required>
+                        <label for="Handle">Handle*</label>
+                        <input type="text" name="ctm_handle" id="Handle" required>
                     </div>
+                    <sub>The Handle used in the card builder such as Arigato</sub>
         
                     <div>
-                        <label for="ctm-source">Source*</label>
-                        <input type="text" name="Source" id="ctm-source" required>
+                        <label for="Source">Source*</label>
+                        <input type="text" name="ctm_source" id="Source" required>
                     </div>
+                    <sub>The name of source of the promotion or offer such as ‘FSR’ or ‘Heinz’</sub>
         
                     <div>
-                        <label for="ctm-type">Type*</label>
-                        <select class="ctype" id="ctm-type" name="Type" required>
-                            <option value="user-marketing">User Marketing</option>
+                        <label for="Type">Type*</label>
+                        <select class="ctype" id="Type" name="ctm_type" required>
+                            <option value="user_marketing">User Marketing</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
+                    <sub>The type of card; product, manufacturer, service, or user marketing</sub>
         
                     <div>
-                        <label for="ctm-campaign-id">Campaign ID*</label>
-                        <input type="text" name="Compaign-ID" id="ctm-campaign-id" required>
+                        <label for="Campaign-ID">Campaign ID*</label>
+                        <input type="text" name="ctm_campaign_id" id="Campaign-ID" required>
                     </div>
+                    <sub>This identifies the overall campaign such as ‘Heinz Mayo Q3 2022’</sub>
         
                     <div>
-                        <label for="ctm-version">Version</label>
-                        <input type="text" name="Version" id="ctm-version">
+                        <label for="Version">Version</label>
+                        <input type="text" name="ctm_version" id="Version">
                     </div>
+                    <sub>This identifies the version of the campaign such as ‘v1’ or ‘v1-1’. Leave blank if not applicable</sub>
         
                     <div>
-                        <label for="ctm-tags">Tags</label>
-                        <input type="text" name="Tags" id="ctm-tags">
+                        <label for="Tags">Tags</label>
+                        <input type="text" name="ctm_tags" id="Tags">
                     </div>
+                    <sub>These are 3 to 5 words used to describe the card, promo, or offer </sub>
         
                     <div>
-                        <label for="ctm-value">Value</label>
-                        <input class="cvalue" type="text" name="Value" id="ctm-value">
-                        <select class="cvalues" id="ctm-values" name="Values">
+                        <label for="Value">Value</label>
+                        <input class="cvalue" type="text" name="ctm_value" id="Value">
+                        <select class="cvalues" id="Values" name="ctm_values">
                             <option value="points">Points</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
-        
+                    <sub>The value of the offer to the user in points or dollars</sub>
+
+                    <div>
+                        <button type="button" onclick="generateTag()">Generate</button>
+                        <button type="reset">Clear</button>
+                    </div>
+
+                    <div>
+                        <label for="output-tag">TAG</label>
+                        <textarea id="output-tag" cols="30" rows="5" placeholder="..."></textarea>
+                    </div>
+                
+                    <div>
+                        <label for="output-json">JSON</label>
+                        <textarea id="output-json" cols="30" rows="5" placeholder="..."></textarea>
+                    </div>
+
                 </fieldset>
                 
             </form>        
         </section>
-        <script src="" async defer></script>
+        <script src="./assets/script.js"></script>
     </body>
 </html>
