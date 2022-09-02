@@ -21,10 +21,11 @@ function formatData( formData ) {
         if(key === "ctm_tags" || key === "ctm_value"){
             object['json'][key] = value.toLowerCase();
         } else {
-            object['json'][key] = value.replace(" ", "_").toLowerCase();
+            object['json'][key] = value.replaceAll(" ", "_").toLowerCase();
         }
     });
 
+    object['json']['ctm_date'] = new Date().toISOString();
     object["tag"] = uri += new URLSearchParams(object['json']).toString();
 
     return object;
