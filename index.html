@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tag Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+    <body>
+        <section>
+            <form action="">
+                <fieldset>
+                    <legend>FSR CTM Tag Builder</legend>
+                    <div>
+                        <label for="ctm-handle">Handle*</label>
+                        <input type="text" name="Handle" id="ctm-handle" required>
+                    </div>
+        
+                    <div>
+                        <label for="ctm-source">Source*</label>
+                        <input type="text" name="Source" id="ctm-source" required>
+                    </div>
+        
+                    <div>
+                        <label for="ctm-type">Type*</label>
+                        <select class="ctype" id="ctm-type" name="Type" required>
+                            <option value="user-marketing">User Marketing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+        
+                    <div>
+                        <label for="ctm-campaign-id">Campaign ID*</label>
+                        <input type="text" name="Compaign-ID" id="ctm-campaign-id" required>
+                    </div>
+        
+                    <div>
+                        <label for="ctm-version">Version</label>
+                        <input type="text" name="Version" id="ctm-version">
+                    </div>
+        
+                    <div>
+                        <label for="ctm-tags">Tags</label>
+                        <input type="text" name="Tags" id="ctm-tags">
+                    </div>
+        
+                    <div>
+                        <label for="ctm-value">Value</label>
+                        <input class="cvalue" type="text" name="Value" id="ctm-value">
+                        <select class="cvalues" id="ctm-values" name="Values">
+                            <option value="points">Points</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+        
+                </fieldset>
+                
+            </form>        
+        </section>
+        <script src="" async defer></script>
+    </body>
+</html>

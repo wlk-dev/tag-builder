@@ -1,0 +1,57 @@
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px white;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+    color: black;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+input {
+    padding: .5em;
+    border: solid 1px black;
+    width: auto;
+    height: 1em;
+}
+
+
+.ctype {
+    border: solid 1px black;
+    height: 2em;
+    width: auto;
+}
+
+.cvalues {
+    border: solid 1px black;
+    height: 2em;
+}
+
+.cvalue {
+    border: solid 1px black;
+    height: 1em;
+    width: auto;
+}
+
+@media screen and (min-width: 430px) {
+    legend {
+        font-size: 1.75em;
+    }
+
+    fieldset {
+        width: 40%;
+        min-width: 320px;
+        margin: auto;
+    }
+
+}
